@@ -1,0 +1,137 @@
+{{ define "tocItem" }}
+<li class="toc__item">
+  <a href="{{ .Href }}">{{ .Title }}</a>
+  {{- if .Children }}
+  <ul class="toc__list toc__list--nested">
+    {{- range .Children }}
+    {{ template "tocItem" . }}
+    {{- end }}
+  </ul>
+  {{- end }}
+</li>
+{{ end }}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .PageTitle }} | {{ .SiteTitle }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__body">
+      <h1 class="hero__title">{{ .SiteTitle }}</h1>
+      <p class="hero__tagline">共有PC専用マニュアル</p>
+    </div>
+  </header>
+  <main class="container">
+    {{- if .TOC }}
+    <section class="toc">
+      <h2 class="toc__title">目次</h2>
+      {{- range .TOC }}
+      <div class="toc__group">
+        <h3 class="toc__group-title">{{ .Title }}</h3>
+        <ul class="toc__list">
+          {{- range .Pages }}
+          {{ template "tocItem" . }}
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </section>
+    {{- end }}
+    {{- if .History }}
+    <section class="history">
+      <div class="history__header">
+        <h2 class="history__title">更新履歴</h2>
+        {{- if eq .Mode "view" }}
+        <a class="btn btn-secondary" href="/diff">未コミット差分</a>
+        {{- end }}
+      </div>
+      <ol class="history__list">
+        {{- range .History }}
+        <li class="history__item {{if .Active }}is-active{{ end }}">
+          <a class="history__link" href="{{ .Link }}">
+            <time class="history__time">{{ .Timestamp }}</time>
+            <span class="history__label">{{ .Label }}</span>
+            {{- if .Active }}<span class="history__badge">閲覧中</span>{{ end }}
+          </a>
+          {{- if .Hash }}
+          <div class="history__actions">
+            <a href="/diff?commit={{ .Hash }}" class="link">差分を見る</a>
+          </div>
+          {{- end }}
+        </li>
+        {{- end }}
+      </ol>
+    </section>
+    {{- end }}
+
+    {{- if .Flash }}
+    <div class="flash flash-{{ .Flash.Type }}">{{ .Flash.Message }}</div>
+    {{- end }}
+
+    {{- if or (eq .Mode "view") (eq .Mode "page") }}
+    {{- if .CanEdit }}
+    <div class="actions">
+      <a class="btn" href="/edit">このページを編集</a>
+    </div>
+    {{- end }}
+    <article class="manual">
+      {{ .Content }}
+    </article>
+    <footer class="footer">
+      最終更新: {{ .UpdatedAt }}
+    </footer>
+
+    {{- else if eq .Mode "edit" }}
+    <section class="editor">
+      <h2 class="editor__title">トップページの編集</h2>
+      <form method="post" action="/edit">
+        <div class="form-field">
+          <label for="editor-content">本文 (Markdown)</label>
+          <textarea id="editor-content" name="content" rows="18" required>{{ .EditContent }}</textarea>
+          <p class="form-hint">画像を挿入する場合は <code>![説明](media/ファイル名.png)</code> の形式で記載してください。</p>
+        </div>
+        <div class="form-group">
+          <div class="form-field">
+            <label for="editor-author">記録する名前</label>
+            <input id="editor-author" type="text" name="author" value="{{ .EditAuthor }}" placeholder="例: 研修担当 佐藤" required>
+          </div>
+          <div class="form-field">
+            <label for="editor-message">更新メモ</label>
+            <input id="editor-message" type="text" name="message" value="{{ .EditMessage }}" placeholder="例: 新規手順を追記">
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">保存して履歴に記録</button>
+          <a class="btn btn-secondary" href="/">キャンセル</a>
+        </div>
+      </form>
+    </section>
+
+    {{- else if eq .Mode "diff" }}
+    <section class="diff">
+      <h2 class="diff__title">差分: {{ .DiffTitle }}</h2>
+      <p class="diff__meta">
+        比較元: <strong>{{ .DiffBaseLabel }}</strong><br>
+        比較先: <strong>{{ .DiffCompareLabel }}</strong>
+      </p>
+      {{- if .DiffIsEmpty }}
+      <div class="diff__empty">差分はありません。</div>
+      {{- else }}
+      <div class="diff__body">
+        {{ .DiffHTML }}
+      </div>
+      {{- end }}
+      <div class="actions">
+        <a class="btn" href="/">トップページに戻る</a>
+        <a class="btn btn-secondary" href="/edit">編集に進む</a>
+      </div>
+    </section>
+    {{- end }}
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

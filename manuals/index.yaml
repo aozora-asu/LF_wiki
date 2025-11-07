@@ -1,0 +1,81 @@
+{
+  "title": "社内マニュアル",
+  "description": "シフトで共有するPC向けに整備された社内マニュアルです。\\nカテゴリと階層的な目次から各ページに移動できます。",
+  "categories": [
+    {
+      "id": "fundamentals",
+      "title": "基本ガイド",
+      "pages": [
+        {
+          "slug": "top",
+          "title": "トップページ",
+          "file": "entries/top.md"
+        },
+        {
+          "slug": "shukkobo",
+          "title": "出稿簿の書き方",
+          "file": "entries/shukkobo.md"
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "title": "取材・連絡",
+      "pages": [
+        {
+          "slug": "phone-interview",
+          "title": "電話取材のやり方",
+          "file": "entries/phone-interview.md"
+        }
+      ]
+    },
+    {
+      "id": "weekday-support",
+      "title": "曜日ごとの対応",
+      "pages": [
+        {
+          "slug": "weekday-overview",
+          "title": "曜日別対応の概要",
+          "file": "entries/weekday/overview.md",
+          "children": [
+            {
+              "slug": "weekday-monday",
+              "title": "月曜日: 週初めの確認",
+              "file": "entries/weekday/monday.md"
+            },
+            {
+              "slug": "weekday-tuesday",
+              "title": "火曜日: 原稿整理",
+              "file": "entries/weekday/tuesday.md"
+            },
+            {
+              "slug": "weekday-wednesday",
+              "title": "水曜日: 中日リマインド",
+              "file": "entries/weekday/wednesday.md"
+            },
+            {
+              "slug": "weekday-thursday",
+              "title": "木曜日: 校了準備",
+              "file": "entries/weekday/thursday.md"
+            },
+            {
+              "slug": "weekday-friday",
+              "title": "金曜日: 週末締切",
+              "file": "entries/weekday/friday.md"
+            },
+            {
+              "slug": "weekday-saturday",
+              "title": "土曜日: 休日対応",
+              "file": "entries/weekday/saturday.md"
+            },
+            {
+              "slug": "weekday-sunday",
+              "title": "日曜日: 週次レポート",
+              "file": "entries/weekday/sunday.md"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

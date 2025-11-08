@@ -65,7 +65,14 @@
           "slug": "night-special",
           "title": "夜勤 特殊業務",
           "file": "entries/night/special.md",
-          "children": null
+          "children": [
+            {
+              "slug": "newpage-20251109",
+              "title": "新しいページ",
+              "file": "entries/newpage-20251109.md",
+              "children": null
+            }
+          ]
         }
       ]
     },

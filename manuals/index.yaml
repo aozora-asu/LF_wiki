@@ -3,6 +3,73 @@
   "description": "シフトで共有するPC向けに整備された社内マニュアルです。\\nカテゴリと階層的な目次から各ページに移動できます。",
   "categories": [
     {
+      "id": "night-shift",
+      "title": "夜勤",
+      "pages": [
+        {
+          "slug": "night-basic",
+          "title": "夜勤 Basic",
+          "file": "entries/night/basic.md",
+          "children": null
+        },
+        {
+          "slug": "night-weekday-overview",
+          "title": "夜勤 曜日ごとの動き",
+          "file": "entries/night/weekday-overview.md",
+          "children": [
+            {
+              "slug": "night-weekday-monday",
+              "title": "月曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/monday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-tuesday",
+              "title": "火曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/tuesday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-wednesday",
+              "title": "水曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/wednesday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-thursday",
+              "title": "木曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/thursday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-friday",
+              "title": "金曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/friday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-saturday",
+              "title": "土曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/saturday.md",
+              "children": null
+            },
+            {
+              "slug": "night-weekday-sunday",
+              "title": "日曜日: 夜勤ルーチン",
+              "file": "entries/night/weekday/sunday.md",
+              "children": null
+            }
+          ]
+        },
+        {
+          "slug": "night-special",
+          "title": "夜勤 特殊業務",
+          "file": "entries/night/special.md",
+          "children": null
+        }
+      ]
+    },
+    {
       "id": "day-shift",
       "title": "日勤",
       "pages": [
@@ -92,73 +159,6 @@
               "children": null
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "night-shift",
-      "title": "夜勤",
-      "pages": [
-        {
-          "slug": "night-basic",
-          "title": "夜勤 Basic",
-          "file": "entries/night/basic.md",
-          "children": null
-        },
-        {
-          "slug": "night-weekday-overview",
-          "title": "夜勤 曜日ごとの動き",
-          "file": "entries/night/weekday-overview.md",
-          "children": [
-            {
-              "slug": "night-weekday-monday",
-              "title": "月曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/monday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-tuesday",
-              "title": "火曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/tuesday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-wednesday",
-              "title": "水曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/wednesday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-thursday",
-              "title": "木曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/thursday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-friday",
-              "title": "金曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/friday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-saturday",
-              "title": "土曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/saturday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-sunday",
-              "title": "日曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/sunday.md",
-              "children": null
-            }
-          ]
-        },
-        {
-          "slug": "night-special",
-          "title": "夜勤 特殊業務",
-          "file": "entries/night/special.md",
-          "children": null
         }
       ]
     },

@@ -1,178 +1,202 @@
 {
   "title": "社内マニュアル",
-  "description": "シフトで共有するPC向けに整備された社内マニュアルです。\\nカテゴリと階層的な目次から各ページに移動できます。",
-  "categories": [
+  "description": "シフトで共有するPC向けに整備された社内マニュアルです。\n階層的なページ構造から各マニュアルに移動できます。",
+  "pages": [
     {
-      "id": "day-shift",
-      "title": "日勤",
-      "pages": [
-        {
-          "slug": "top",
-          "title": "日勤 Basic",
-          "file": "entries/top.md",
-          "children": [
-            {
-              "slug": "phone-interview",
-              "title": "電話取材のやり方",
-              "file": "entries/phone-interview.md",
-              "children": null
-            },
-            {
-              "slug": "day-audio-guide",
-              "title": "音声の取り方",
-              "file": "entries/day/basic/audio.md",
-              "children": null
-            }
-          ]
-        },
-        {
-          "slug": "day-weekday-overview",
-          "title": "日勤 曜日ごとの動き",
-          "file": "entries/weekday/overview.md",
-          "children": [
-            {
-              "slug": "day-weekday-monday",
-              "title": "月曜日: 週初めの確認",
-              "file": "entries/weekday/monday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-tuesday",
-              "title": "火曜日: 原稿整理",
-              "file": "entries/weekday/tuesday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-wednesday",
-              "title": "水曜日: 中日リマインド",
-              "file": "entries/weekday/wednesday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-thursday",
-              "title": "木曜日: 校了準備",
-              "file": "entries/weekday/thursday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-friday",
-              "title": "金曜日: 週末締切",
-              "file": "entries/weekday/friday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-saturday",
-              "title": "土曜日: 休日対応",
-              "file": "entries/weekday/saturday.md",
-              "children": null
-            },
-            {
-              "slug": "day-weekday-sunday",
-              "title": "日曜日: 週次レポート",
-              "file": "entries/weekday/sunday.md",
-              "children": null
-            }
-          ]
-        },
-        {
-          "slug": "day-special",
-          "title": "日勤 特殊業務",
-          "file": "entries/day/special.md",
-          "children": [
-            {
-              "slug": "shukkobo",
-              "title": "出稿簿の書き方",
-              "file": "entries/shukkobo.md",
-              "children": null
-            },
-            {
-              "slug": "day-disaster",
-              "title": "日勤 災害時初動",
-              "file": "entries/day/disaster.md",
-              "children": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "night-shift",
-      "title": "夜勤",
-      "pages": [
-        {
-          "slug": "night-weekday-overview",
-          "title": "夜勤 曜日ごとの動き",
-          "file": "entries/night/weekday-overview.md",
-          "children": [
-            {
-              "slug": "night-weekday-tuesday",
-              "title": "火曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/tuesday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-wednesday",
-              "title": "水曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/wednesday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-monday",
-              "title": "月曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/monday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-thursday",
-              "title": "木曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/thursday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-friday",
-              "title": "金曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/friday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-saturday",
-              "title": "土曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/saturday.md",
-              "children": null
-            },
-            {
-              "slug": "night-weekday-sunday",
-              "title": "日曜日: 夜勤ルーチン",
-              "file": "entries/night/weekday/sunday.md",
-              "children": null
-            }
-          ]
-        },
-        {
-          "slug": "night-basic",
-          "title": "夜勤 Basic",
-          "file": "entries/night/basic.md",
-          "children": null
-        },
-        {
-          "slug": "night-special",
-          "title": "夜勤 特殊業務",
-          "file": "entries/night/special.md",
-          "children": [
-            {
-              "slug": "newpage-20251109",
-              "title": "新しいページ",
-              "file": "entries/newpage-20251109.md",
-              "children": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "desk-info",
-      "title": "デスクさんについて",
+      "slug": "newpage-20251109-1",
+      "title": "新しいページ",
+      "file": "entries/newpage-20251109-1.md",
       "pages": []
+    },
+    {
+      "slug": "top",
+      "title": "社内マニュアル",
+      "file": "entries/top.md",
+      "pages": [
+        {
+          "slug": "day",
+          "title": "日勤",
+          "file": "entries/day/index.md",
+          "pages": [
+            {
+              "slug": "day-basic",
+              "title": "Basic",
+              "file": "entries/day/basic.md",
+              "pages": [
+                {
+                  "slug": "phone-interview",
+                  "title": "電話取材のやり方",
+                  "file": "entries/phone-interview.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-audio-guide",
+                  "title": "音声の取り方",
+                  "file": "entries/day/basic/audio.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-special",
+                  "title": "特殊業務",
+                  "file": "entries/day/special.md",
+                  "pages": [
+                    {
+                      "slug": "day-disaster",
+                      "title": "日勤 災害時初動",
+                      "file": "entries/day/disaster.md",
+                      "pages": [
+                        {
+                          "slug": "shukkobo",
+                          "title": "出稿簿の書き方",
+                          "file": "entries/shukkobo.md",
+                          "pages": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "slug": "day-weekday-overview",
+              "title": "曜日ごとの動き",
+              "file": "entries/weekday/overview.md",
+              "pages": [
+                {
+                  "slug": "day-weekday-wednesday",
+                  "title": "水曜日: 中日リマインド",
+                  "file": "entries/weekday/wednesday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-thursday",
+                  "title": "木曜日: 校了準備",
+                  "file": "entries/weekday/thursday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-saturday",
+                  "title": "土曜日: 休日対応",
+                  "file": "entries/weekday/saturday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-sunday",
+                  "title": "日曜日: 週次レポート",
+                  "file": "entries/weekday/sunday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-monday",
+                  "title": "月曜日: 週初めの確認",
+                  "file": "entries/weekday/monday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-tuesday",
+                  "title": "火曜日: 原稿整理",
+                  "file": "entries/weekday/tuesday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "day-weekday-friday",
+                  "title": "金曜日: 週末締切",
+                  "file": "entries/weekday/friday.md",
+                  "pages": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "night",
+          "title": "夜勤",
+          "file": "entries/night/index.md",
+          "pages": [
+            {
+              "slug": "night-basic",
+              "title": "Basic",
+              "file": "entries/night/basic.md",
+              "pages": []
+            },
+            {
+              "slug": "night-weekday-overview",
+              "title": "曜日ごとの動き",
+              "file": "entries/night/weekday-overview.md",
+              "pages": [
+                {
+                  "slug": "night-weekday-tuesday",
+                  "title": "火曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/tuesday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-wednesday",
+                  "title": "水曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/wednesday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-monday",
+                  "title": "月曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/monday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-thursday",
+                  "title": "木曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/thursday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-friday",
+                  "title": "金曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/friday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-saturday",
+                  "title": "土曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/saturday.md",
+                  "pages": []
+                },
+                {
+                  "slug": "night-weekday-sunday",
+                  "title": "日曜日: 夜勤ルーチン",
+                  "file": "entries/night/weekday/sunday.md",
+                  "pages": []
+                }
+              ]
+            },
+            {
+              "slug": "night-special",
+              "title": "特殊業務",
+              "file": "entries/night/special.md",
+              "pages": [
+                {
+                  "slug": "newpage-20251109",
+                  "title": "新しいページ",
+                  "file": "entries/newpage-20251109.md",
+                  "pages": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "desk",
+          "title": "デスクさんについて",
+          "file": "entries/desk-info.md",
+          "pages": [
+            {
+              "slug": "desk-team",
+              "title": "デスクさんの情報",
+              "file": "entries/desk-team.md",
+              "pages": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

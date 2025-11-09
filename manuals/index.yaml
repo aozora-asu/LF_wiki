@@ -9,7 +9,7 @@
       "pages": [
         {
           "slug": "newpage-20251109-2",
-          "title": "新しいページ",
+          "title": "Sampleページ",
           "file": "entries/newpage-20251109-2.md",
           "pages": null
         }
@@ -203,6 +203,24 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "newpage-20251109-3",
+      "title": "新しいページ",
+      "file": "entries/newpage-20251109-3.md",
+      "pages": null
+    },
+    {
+      "slug": "newpage-20251109-4",
+      "title": "新しいページ",
+      "file": "entries/newpage-20251109-4.md",
+      "pages": null
+    },
+    {
+      "slug": "newpage-20251109-5",
+      "title": "新しいページ",
+      "file": "entries/newpage-20251109-5.md",
+      "pages": null
     }
   ]
 }

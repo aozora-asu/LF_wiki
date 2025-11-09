@@ -4,9 +4,16 @@
   "pages": [
     {
       "slug": "newpage-20251109-1",
-      "title": "新しいページ",
+      "title": "自由に遊んでいいページ",
       "file": "entries/newpage-20251109-1.md",
-      "pages": []
+      "pages": [
+        {
+          "slug": "newpage-20251109-2",
+          "title": "新しいページ",
+          "file": "entries/newpage-20251109-2.md",
+          "pages": null
+        }
+      ]
     },
     {
       "slug": "top",
@@ -44,16 +51,15 @@
                       "slug": "day-disaster",
                       "title": "日勤 災害時初動",
                       "file": "entries/day/disaster.md",
-                      "pages": [
-                        {
-                          "slug": "shukkobo",
-                          "title": "出稿簿の書き方",
-                          "file": "entries/shukkobo.md",
-                          "pages": []
-                        }
-                      ]
+                      "pages": []
                     }
                   ]
+                },
+                {
+                  "slug": "shukkobo",
+                  "title": "出稿簿の書き方",
+                  "file": "entries/shukkobo.md",
+                  "pages": []
                 }
               ]
             },
